@@ -1,7 +1,5 @@
 ﻿# Portfolio_website
 
- # JavaScript Projects
-
 These are some small projects I made using JavaScript.
 
 ## Projects
@@ -27,4 +25,5 @@ The classic game of tic-tac-toe. It randomly rolls dice to select which of the t
 ## Calculator
 
 A basic 4 function calculator. Users can add, subtract, multiply, and divide on a sleek web version of a calculator.
+
 
