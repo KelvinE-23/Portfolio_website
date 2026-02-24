@@ -1,0 +1,514 @@
+/* Import a modern font (Raleway) */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
+/* ===== COLOR PALETTE (Blue / Light Gray / Light Blue) ===== */
+:root {
+    --blue-900: #0b1f3b; /* deep navy */
+    --blue-700: #123a73; /* primary blue */
+    --blue-400: #63b3ff; /* light blue accent */
+    --gray-100: #f3f6fb; /* very light gray background */
+    --gray-200: #e7edf6; /* light gray surface */
+    --gray-600: #5b677a; /* text gray */
+    --white: #ffffff;
+}
+
+/***** GENERAL STYLING *****/
+
+/* Affects entire document */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    margin: 0%;
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-family: 'Raleway', Arial, sans-serif; /* UPDATED font */
+    font-size: 1.0vw;
+    overflow-x: hidden;
+    user-select: none;
+
+    background-color: var(--gray-100); /* UPDATED */
+    color: var(--gray-600); /* UPDATED */
+}
+
+/* Fade effect for page load */
+body.fade-out {
+    opacity: .1;
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase;
+    font-family: 'Raleway', Arial, sans-serif; /* UPDATED */
+    font-weight: 700;
+    text-align: center;
+    margin-top: 3%;
+    color: var(--blue-900); /* UPDATED */
+}
+
+/* Heading hover effect */
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/* Portfolio Title Text */
+.white-text {
+    color: var(--white);
+    padding-top: 10vh;
+}
+
+/* Paragraph elements */
+p {
+    font-family: 'Raleway', Arial, sans-serif; /* UPDATED */
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+/* Paragraph hover effect */
+p:hover {
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+/* Center class */
+.center {
+    text-align: center;
+}
+
+/* Center hover effect */
+.center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+/* Anchor elements */
+a {
+    color: var(--blue-400); /* UPDATED */
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--blue-700); /* UPDATED */
+}
+
+/* Quotation elements */
+q {
+    font-style: italic;
+}
+
+/* Image elements */
+img {
+    filter: grayscale(75%);
+    border-radius: 10px; /* slightly more modern */
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Image hover effects */
+img:hover {
+    filter: grayscale(5%);
+}
+
+/* Footer */
+footer {
+    padding: 2%;
+    background-color: var(--gray-200); /* UPDATED */
+    color: var(--blue-900); /* UPDATED */
+}
+/***** End of General Styling *****/
+
+
+/***** Navbar Styling *****/
+.Navbar {
+    overflow: hidden;
+    background-color: var(--blue-900); /* UPDATED */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+
+    /* subtle modern edge */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+@keyframes moveNav {
+    from { left: -100vw; }
+    to { left: 0vw; }
+}
+
+/* Navbar Links */
+.Navbar a {
+    float: left;
+    display: block;
+    color: var(--white);
+    padding: .75vw 1vw;
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif; /* UPDATED */
+    font-weight: 600;
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+}
+
+@keyframes moveNavText {
+    from { top: -100vw; }
+    to { top: 0vw; }
+}
+
+/* Navbar hover effects */
+.Navbar a:hover {
+    background-color: var(--gray-200); /* UPDATED */
+    color: var(--blue-900); /* UPDATED */
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+/* Navbar active link */
+.Navbar a.active {
+    background-color: var(--blue-700); /* UPDATED */
+}
+/***** End of Navbar Styling *****/
+
+
+/***** Video Styling *****/
+#Typing_Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+/* Text over the video */
+.Video_Text {
+    background: rgba(11, 31, 59, 0.55); /* UPDATED: navy tint overlay */
+    color: var(--white);
+    width: 100%;
+    height: 100vh;
+    padding-top: 2vh;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+@keyframes moveVideoText {
+    from { top: -100vw; }
+    to { top: 0vw; }
+}
+/***** End of Video Styling *****/
+
+
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+    background: rgba(231, 237, 246, 0.55); /* UPDATED: light gray-blue */
+}
+
+/*.mySlides {
+    display: none;
+}*/
+
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+#Slideshow_Container a {
+    text-decoration: none;
+}
+
+.Slideshow_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 8px 18px 6px rgba(11, 31, 59, .45); /* UPDATED: softer shadow */
+    width: 100%;
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    color: var(--gray-200);
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(11, 31, 59, 0.85); /* UPDATED */
+    color: var(--white);
+}
+
+/* Slideshow text */
+.text {
+    color: var(--white);
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway', Arial, sans-serif; /* UPDATED */
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: rgba(11, 31, 59, 0.80); /* UPDATED */
+    font-weight: 600;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* Dots */
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: 1;
+}
+
+.active, .dot:hover {
+    background-color: var(--blue-400); /* UPDATED */
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+/***** End Slideshow Styling *****/
+
+
+/***** Table Styling (Columns / Rows) *****/
+* {
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 450px;
+    background-color: var(--gray-200); /* UPDATED */
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 450px;
+    background-color: #cfe8ff; /* UPDATED: light blue panel */
+}
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/***** End Table Styling *****/
+
+
+/***** Contact Form Styling *****/
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: var(--white);
+    color: var(--blue-900);
+    border: 2px solid var(--blue-700); /* UPDATED */
+    cursor: pointer;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+
+    border-radius: 10px; /* UPDATED */
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15); /* UPDATED */
+}
+
+@keyframes movePopup {
+    from { right: -40vw; }
+    to { right: 1.75vw; }
+}
+
+@-webkit-keyframes movePopup {
+    from { right: -40vw; }
+    to { right: 1.75vw; }
+}
+
+.form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 1vw;
+    background-color: var(--white);
+    border-radius: 12px; /* UPDATED */
+    border: 1px solid var(--gray-200); /* UPDATED */
+    box-shadow: 0 16px 40px rgba(0,0,0,0.20); /* UPDATED */
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: 1px solid var(--gray-200); /* UPDATED */
+    background: var(--gray-100); /* UPDATED */
+    font-size: 1vw;
+    border-radius: 10px; /* UPDATED */
+    font-family: 'Raleway', Arial, sans-serif; /* UPDATED */
+}
+
+/* General buttons */
+button {
+    font-family: 'Raleway', Arial, sans-serif; /* UPDATED */
+    letter-spacing: .25vw;
+    font-size: 1.5vw;
+    font-weight: 700;
+    padding: 1.5vw;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* UPDATED */
+}
+
+/* Hover effect */
+button:hover, .form-container .btn:hover {
+    color: var(--white);
+    background-color: var(--blue-700); /* UPDATED */
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: var(--blue-400); /* UPDATED */
+}
+
+/* Submit button */
+.form-container .btn {
+    background-color: var(--white);
+    color: var(--blue-900);
+    border: 2px solid var(--blue-700); /* UPDATED */
+    margin-bottom: 1vh;
+}
+
+/* Close button */
+.form-container .cancel {
+    background-color: var(--blue-900); /* UPDATED */
+    color: var(--white);
+    border: 2px solid var(--blue-900); /* UPDATED */
+}
+
+.form-container .cancel:hover {
+    color: var(--white);
+    background-color: #b91c1c; /* keep a clear “danger” close hover */
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: var(--blue-900);
+}
+/***** End Contact Form Styling *****/
+
+
+/* Media rules for paragraph font size */
+@media screen and (max-width: 527px) {
+    p { font-size: 3.75vw; }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p { font-size: 3.5vw; }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p { font-size: 2.75vw; }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p { font-size: 2.5vw; }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p { font-size: 2.25vw; }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p { font-size: 2vw; }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p { font-size: 1.75vw; }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p { font-size: 1.5vw; }
+}
+
+@media screen and (min-width: 2270px) {
+    p { font-size: 1.35vw; }
+}
+
+/* Navbar links on smaller screens */
+@media screen and (max-width: 1080px) {
+    .Navbar a {
+        width: 20%;
+        font-size: 2.5vw;
+    }
+}
+
+/* Enlarge quote + title on smaller screens */
+@media screen and (max-width: 1080px) {
+    .quote { font-size: 3.5vw; }
+    .white-text { font-size: 4.5vw; }
+}
+
+/* Taller columns on large screens */
+@media screen and (min-width: 1725px) {
+    .Column_1 { height: 550px; }
+    .Column_2 { height: 550px; }
+}
+
+/* Reduce h1 margin on extra large screens */
+@media screen and (min-width: 2000px) {
+    h1 { margin-top: 0; }
+}
